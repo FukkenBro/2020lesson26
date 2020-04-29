@@ -2,24 +2,77 @@
 <html>
 
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope' rel='stylesheet'>
     <meta charset="UTF-8">
     <title>Add user test app</title>
+    <link href="/adduser.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("img.gif");
+            background-color: #cccccc;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .b1 {
+            margin-top: 20%;
+            background: #270073;
+            border: 30px solid#008ee5;
+            border-radius: 40px;
+            width: 30%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .b1:hover {
+            border: 30px solid#00bdff;
+        }
+
+        form {
+            text-decoration: none;
+            font-family: 'Annie Use Your Telescope';
+            font-size: 50px;
+            color: #008ee5;
+            align-items: center;
+        }
+
+        form:hover {
+            color: #00bdff;
+        }
+
+        #button,
+        #field1,
+        #field2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
 
-<form action="/adduserform/api/add" method="POST">
-    First name:
-    <br>
-    <input type="text" name="name">
-    <br><br>
-    Last name:
-    <br>
-    <input type="number" name="age">
-    <br><br>
-    <input type="submit" value="Submit">
-</form>
 
+    <div class="buttons">
+        <div class="b1">
+            <form action="/adduserform/api/add" method="POST">
+                <div id="field1">
+                    Name: 
+                    <input id="text1" type="text" name="name">
+                </div>
+                <div id="field2">
+                    Age: 
+                    <input type="number" name="age">
+                </div>
+                <div id="button"><input type="submit" value="Submit"></div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
